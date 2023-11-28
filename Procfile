@@ -1,0 +1,1 @@
+web: ./bin/rails db:reset && ./bin/rails server -e production

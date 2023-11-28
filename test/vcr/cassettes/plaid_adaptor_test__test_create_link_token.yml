@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.plaid.com/link/token/create
+    body:
+      encoding: UTF-8
+      string: '{"client_name":"turbochardo''s app","language":"en","country_codes":["CA"],"user":{"client_user_id":"1"},"products":["auth","transactions"]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Plaid Ruby v14.0.0.beta.5
+      Accept:
+      - application/json
+      Plaid-Client-Id:
+      - "<PLAID CLIENT ID>"
+      Plaid-Version:
+      - '2020-09-14'
+      Plaid-Secret:
+      - "<PLAID SECRET>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Aug 2021 19:24:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '155'
+      Connection:
+      - keep-alive
+      Plaid-Version:
+      - '2020-09-14'
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "expiration": "2021-08-11T23:24:54Z",
+          "link_token": "link-sandbox-b528e746-476b-457a-b51e-a39e77ecfbce",
+          "request_id": "61OMHwcY1LzMWyx"
+        }
+  recorded_at: Wed, 11 Aug 2021 19:24:54 GMT
+recorded_with: VCR 6.0.0

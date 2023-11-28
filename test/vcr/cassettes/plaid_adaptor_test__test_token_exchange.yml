@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.plaid.com/sandbox/public_token/create
+    body:
+      encoding: UTF-8
+      string: '{"institution_id":"ins_43","initial_products":["transactions"]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Plaid Ruby v14.0.0.beta.5
+      Accept:
+      - application/json
+      Plaid-Client-Id:
+      - "<PLAID CLIENT ID>"
+      Plaid-Version:
+      - '2020-09-14'
+      Plaid-Secret:
+      - "<PLAID SECRET>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Aug 2021 19:24:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '124'
+      Connection:
+      - keep-alive
+      Plaid-Version:
+      - '2020-09-14'
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "public_token": "public-sandbox-c54c587f-47df-4a10-b325-c41f3aabe9b9",
+          "request_id": "aQTv3UT5bsK8Jqf"
+        }
+  recorded_at: Wed, 11 Aug 2021 19:24:55 GMT
+- request:
+    method: post
+    uri: https://sandbox.plaid.com/item/public_token/exchange
+    body:
+      encoding: UTF-8
+      string: '{"public_token":"public-sandbox-c54c587f-47df-4a10-b325-c41f3aabe9b9"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Plaid Ruby v14.0.0.beta.5
+      Accept:
+      - application/json
+      Plaid-Client-Id:
+      - "<PLAID CLIENT ID>"
+      Plaid-Version:
+      - '2020-09-14'
+      Plaid-Secret:
+      - "<PLAID SECRET>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Aug 2021 19:24:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Plaid-Version:
+      - '2020-09-14'
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "access-sandbox-fd70b225-ed8a-4bba-8c8e-816daaebe95f",
+          "item_id": "wvVeXVajyZhNBVVdooVAipzDXwMqo9iPmvzpB",
+          "request_id": "1Pa3gB23FKthH2C"
+        }
+  recorded_at: Wed, 11 Aug 2021 19:24:56 GMT
+recorded_with: VCR 6.0.0
